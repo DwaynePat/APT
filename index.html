@@ -1,38 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Apartment Essentials Checklist</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="wrap">
-  <h1>Apartment Essentials</h1>
-  <div class="subtitle">Tap items as you pack, buy, or set them aside.</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apartment Essentials Checklist</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Apartment Essentials</h1>
+      <div class="subtitle">Tap items as you pack, buy, or set them aside.</div>
 
-  <div class="legend">
-    <span><i class="dot bring"></i>Bring (already have)</span>
-    <span><i class="dot buy"></i>Buy</span>
-    <span><i class="dot both"></i>Bring &amp; Buy</span>
-  </div>
+      <div class="legend">
+        <span><i class="dot bring"></i>Bring (already have)</span>
+        <span><i class="dot buy"></i>Buy</span>
+        <span><i class="dot both"></i>Bring &amp; Buy</span>
+      </div>
 
-  <div class="progress-card">
-    <div class="progress-top">
-      <span>Overall progress</span>
-      <span class="num" id="overall-num">0 / 0</span>
+      <div class="progress-card">
+        <div class="progress-top">
+          <span>Overall progress</span>
+          <span class="num" id="overall-num">0 / 0</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill" id="overall-bar"></div>
+        </div>
+      </div>
+
+      <div id="sections"></div>
+
+      <div class="btn-row">
+        <button class="save-btn" id="save-btn">Save progress</button>
+        <button class="reset-btn" id="reset-btn">Reset checklist</button>
+      </div>
+      <div class="save-status" id="save-status"></div>
     </div>
-    <div class="bar-track"><div class="bar-fill" id="overall-bar"></div></div>
-  </div>
 
-  <div id="sections"></div>
-
-  <div class="btn-row">
-    <button class="save-btn" id="save-btn">Save progress</button>
-    <button class="reset-btn" id="reset-btn">Reset checklist</button>
-  </div>
-  <div class="save-status" id="save-status"></div>
-</div>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
