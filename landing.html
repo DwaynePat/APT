@@ -1,96 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apartment Essentials</title>
-<link rel="stylesheet" href="style.css">
-<style>
-  .hero{
-    min-height:80vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-  }
-  .hero-icon{
-    font-size:2.6rem;
-    margin-bottom:14px;
-  }
-  .hero h1{
-    font-size:2.1rem;
-    margin:0 0 10px;
-    letter-spacing:-0.02em;
-  }
-  .hero p{
-    color:var(--muted);
-    font-size:1rem;
-    max-width:420px;
-    line-height:1.5;
-    margin:0 0 28px;
-  }
-  .hero-cards{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-    justify-content:center;
-    margin-bottom:32px;
-  }
-  .hero-card{
-    background:var(--card);
-    border-radius:12px;
-    padding:14px 18px;
-    box-shadow:0 1px 3px rgba(0,0,0,0.05);
-    font-size:0.82rem;
-    color:var(--ink);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:4px;
-    min-width:100px;
-  }
-  .hero-card .count{
-    font-size:1.3rem;
-    font-weight:700;
-    color:var(--accent);
-  }
-  .start-btn{
-    display:inline-block;
-    background:var(--accent);
-    color:#fff;
-    font-weight:600;
-    font-size:1rem;
-    text-decoration:none;
-    padding:13px 34px;
-    border-radius:24px;
-    box-shadow:0 2px 8px rgba(201,106,78,0.3);
-    transition:opacity .15s ease, transform .15s ease;
-  }
-  .start-btn:hover{opacity:0.92;transform:translateY(-1px);}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apartment Essentials Checklist</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <a href="landing.html" class="back-link">← Home</a>
+      <h1>Apartment Essentials</h1>
+      <div class="subtitle">Tap items as you pack, buy, or set them aside.</div>
 
-  @media (max-width:600px){
-    .hero{min-height:70vh;padding:14px;}
-    .hero h1{font-size:1.6rem;}
-    .hero p{font-size:0.9rem;}
-    .hero-card{min-width:80px;padding:11px 14px;}
-    .start-btn{width:100%;text-align:center;padding:13px 0;}
-  }
-</style>
-</head>
-<body>
-<div class="wrap hero">
-  <div class="hero-icon">🏠</div>
-  <h1>Apartment Essentials</h1>
-  <p>Everything to pack, buy, or set aside for the new place &mdash; kitchen, bedroom, bathroom, and cleaning, all in one checklist.</p>
+      <div class="legend">
+        <span><i class="dot bring"></i>Bring (already have)</span>
+        <span><i class="dot buy"></i>Buy</span>
+        <span><i class="dot both"></i>Bring &amp; Buy</span>
+      </div>
 
-  <div class="hero-cards" id="hero-cards">
-    <div class="hero-card"><span class="count">4</span>Categories</div>
-    <div class="hero-card"><span class="count">41</span>Items</div>
-  </div>
+      <div class="progress-card">
+        <div class="progress-top">
+          <span>Overall progress</span>
+          <span class="num" id="overall-num">0 / 0</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill" id="overall-bar"></div>
+        </div>
+      </div>
 
-  <a class="start-btn" href="index.html">Open checklist →</a>
-</div>
-</body>
+      <div id="sections"></div>
+
+      <div class="btn-row">
+        <button class="save-btn" id="save-btn">Save progress</button>
+        <button class="reset-btn" id="reset-btn">Reset checklist</button>
+      </div>
+      <div class="save-status" id="save-status"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
